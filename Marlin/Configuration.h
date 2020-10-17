@@ -989,7 +989,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { +64, 0, -0.3 }
+#define NOZZLE_TO_PROBE_OFFSET { -37, 0, -0.62 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1127,15 +1127,15 @@
 // The size of the print bed
 //#define X_BED_SIZE 235 //default Ender 3 Pro
 //#define Y_BED_SIZE 235 //default Ender 3 Pro
-#define X_BED_SIZE 230 // Ender 3 Pro w/hemera
+#define X_BED_SIZE 234 // Ender 3 Pro w/hemera
 #define Y_BED_SIZE 218 // Ender 3 Pro w/hemera
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -28
+#define X_MIN_POS -14
 //#define Y_MIN_POS 0 //default Ender 3 Pro
 #define Y_MIN_POS -2 // Ender 3 Pro w/hemera
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE // Ender 3 Pro w/hemera
+#define X_MAX_POS (X_BED_SIZE + 6) // Ender 3 Pro w/hemera
 //#define X_MAX_POS (X_BED_SIZE + 10) //default Ender 3 Pro
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 205 // Ender 3 Pro w/proper printing z braces

@@ -815,7 +815,7 @@
 #define DEFAULT_STEPPER_DEACTIVE_TIME 120
 #define DISABLE_INACTIVE_X true
 #define DISABLE_INACTIVE_Y true
-#define DISABLE_INACTIVE_Z false  // Set to false if the nozzle will fall down on your printed part when print has finished.
+#define DISABLE_INACTIVE_Z true  // Set to false if the nozzle will fall down on your printed part when print has finished.
 #define DISABLE_INACTIVE_E true
 
 // If the Nozzle or Bed falls when the Z stepper is disabled, set its resting position here.

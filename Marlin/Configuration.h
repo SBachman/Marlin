@@ -742,7 +742,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 // #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 } //default values
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 329.3 } //tuned 408.84 for z maybe and 80 is default for XY
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 329.3 } //tuned 408.84 for z maybe and 80 is default for XY
 
 /**
  * Default Max Feed Rate (mm/s)

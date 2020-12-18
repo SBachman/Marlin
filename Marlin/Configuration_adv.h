@@ -2229,8 +2229,8 @@
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
-  #if AXIS_IS_TMC(X)
-    #define X_CURRENT       570       // (mA) RMS current. Multiply by 1.414 for peak current.
+  #if AXIS_IS_TMC(X)                  // model MS17HA4P4100
+    #define X_CURRENT       707       // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_CURRENT_HOME  X_CURRENT  // (mA) RMS current for sensorless homing
     #define X_MICROSTEPS     16    // 0..256
     #define X_RSENSE          0.11
@@ -2245,8 +2245,8 @@
     #define X2_CHAIN_POS     -1
   #endif
 
-  #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT     570       // (mA) RMS current. 90% of rated .84A
+  #if AXIS_IS_TMC(Y)                 // model MS17HA2P4150
+    #define Y_CURRENT     1060       // (mA) RMS current. rated 1.5A
     #define Y_CURRENT_HOME  Y_CURRENT
     #define Y_MICROSTEPS     16
     #define Y_RSENSE          0.11
@@ -2261,8 +2261,8 @@
     #define Y2_CHAIN_POS     -1
   #endif
 
-  #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       570
+  #if AXIS_IS_TMC(Z)                 // model MS17HD4P4100
+    #define Z_CURRENT       707      // (mA) RMS current. rated 1A
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     16
     #define Z_RSENSE          0.11
@@ -3110,7 +3110,7 @@
      * Use 'M200 [T<extruder>] L<limit>' to override and 'M502' to reset.
      * A non-zero value activates Volume-based Extrusion Limiting.
      */
-    #define DEFAULT_VOLUMETRIC_EXTRUDER_LIMIT 7.00      // (mm^3/sec)
+    #define DEFAULT_VOLUMETRIC_EXTRUDER_LIMIT 8.00      // (mm^3/sec)
   #endif
 #endif
 

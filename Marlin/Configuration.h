@@ -1130,9 +1130,9 @@
 #define Y_BED_SIZE 218 // Ender 3 Pro w/hemera
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -14
+#define X_MIN_POS -15
 //#define Y_MIN_POS 0 //default Ender 3 Pro
-#define Y_MIN_POS -2 // Ender 3 Pro w/hemera
+#define Y_MIN_POS -8 // Ender 3 Pro w/hemera
 #define Z_MIN_POS 0
 #define X_MAX_POS (X_BED_SIZE + 6) // Ender 3 Pro w/hemera
 //#define X_MAX_POS (X_BED_SIZE + 10) //default Ender 3 Pro

@@ -2441,6 +2441,11 @@
    * { <off_time[1..15]>, <hysteresis_end[-3..12]>, hysteresis_start[1..8] }
    */
   #define CHOPPER_TIMING CHOPPER_DEFAULT_24V
+    //For different timings for each axis set below, otherwise default timings will be used
+  #define CHOPPER_TIMING_X CHOPPER_09STEP_24V
+  #define CHOPPER_TIMING_Y CHOPPER_09STEP_24V
+  #define CHOPPER_TIMING_Z CHOPPER_DEFAULT_24V
+  #define CHOPPER_TIMING_E CHOPPER_DEFAULT_24V   
 
   /**
    * Monitor Trinamic drivers

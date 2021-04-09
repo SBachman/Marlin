@@ -85,7 +85,7 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+//#define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 #define SHOW_CUSTOM_BOOTSCREEN
@@ -749,7 +749,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 12, 60 }
+#define DEFAULT_MAX_FEEDRATE          { 200, 200, 6, 60 }
 
 #define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -793,7 +793,7 @@
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 7
   #define DEFAULT_YJERK 7
-  #define DEFAULT_ZJERK  1.67
+  #define DEFAULT_ZJERK  1.67 //might need to be lower, was using .3 but I don't remember why
 
   #define TRAVEL_EXTRA_XYJERK 13     // Additional jerk allowance for all travel moves
 
@@ -804,6 +804,7 @@
 #endif
 
 #define DEFAULT_EJERK    25  // May be used by Linear Advance
+//DEFAULT_EJERK  might need to be lower, was using 3 but I don't remember why
 
 /**
  * Junction Deviation Factor
@@ -988,7 +989,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -37, 0, -0.63 }
+#define NOZZLE_TO_PROBE_OFFSET { -37, 0, -0.76 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1137,7 +1138,8 @@
 #define X_MAX_POS (X_BED_SIZE + 6) // Ender 3 Pro w/hemera
 //#define X_MAX_POS (X_BED_SIZE + 10) //default Ender 3 Pro
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 205 // Ender 3 Pro w/proper printing z braces
+#define Z_MAX_POS 255 // Ender 3 Pro w/3dfused rails and no z braces
+//#define Z_MAX_POS 205 // Ender 3 Pro w/proper printing z braces
 //#define Z_MAX_POS 250 //default Ender 3 Pro
 
 /**
@@ -1288,7 +1290,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 7
+  #define GRID_MAX_POINTS_X 9
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
